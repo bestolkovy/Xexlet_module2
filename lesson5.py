@@ -4,4 +4,3 @@ def all_unique(content):
 
 
 print(all_unique(iter([1, 2, 3, 5])))
-
