@@ -1,10 +1,16 @@
-def count_all(listva):
-    listva = list(listva)
-    dictionary = {}
-    # listva = ('huy', 1, 34, 'mars', 'huy', 'mars')
-    for i in listva:
-        dictionary[i] = listva.count(i)
+def make_user(name_value, age_value):
+    dictionary = {'name': name_value,
+                  'age': age_value}
     return dictionary
 
 
-print (count_all('*' * 20))
+def format_user(huy):
+    string = f"{huy['name']}, {huy['age']}"
+    return string
+
+
+pavel = make_user('Pidor', 19)
+print(pavel)
+
+d = format_user(pavel)
+print(d)
