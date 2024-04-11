@@ -6,4 +6,5 @@ def count_all(listva):
         dictionary[i] = listva.count(i)
     return dictionary
 
+
 print(count_all('*' * 20))
