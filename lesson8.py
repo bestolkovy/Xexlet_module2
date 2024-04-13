@@ -1,9 +1,4 @@
-def apply_diff(setto, dic):
+def apply_diff(target, diff):
+    target.update(diff.get['add'])
+    target.difference_update(diff.get['remove'])
 
-
-
-
-target = {'a', 'b'}
-diff = {'add': {'c'}, 'remove': {'a'}}
-apply_diff(target, diff)
-print(target)  # => {'c', 'b'}
