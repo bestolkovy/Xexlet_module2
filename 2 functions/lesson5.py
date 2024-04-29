@@ -10,12 +10,3 @@ def get_first_name(name_surname):
 def sort_by(key_func, user_list):
     sorted_list = sorted(user_list, key=key_func)
     return sorted_list
-
-
-def get_unique(*args):
-    result = set()
-    for data in args:
-        print(data)
-        result |= set(data)
-        print(result)
-    return [*result]
