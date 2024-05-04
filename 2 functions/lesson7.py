@@ -13,4 +13,4 @@ def say_prime_or_not(argument):
     return print(right_answer)
 
 
-say_prime_or_not(3)
+say_prime_or_not(10)
