@@ -22,4 +22,4 @@ def product(sequence, *args):
 a = [1, 2]
 b = 'abc'
 c = [35, 36]
-print(product(a, b ,c))
+print(product(a, b, c))
