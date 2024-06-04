@@ -1,0 +1,1 @@
+[![hello-world](https://github.com/bestolkovy/Xexlet_module2/actions/workflows/hello-world.yml/badge.svg)](https://github.com/bestolkovy/Xexlet_module2/actions/workflows/hello-world.yml)
