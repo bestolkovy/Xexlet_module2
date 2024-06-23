@@ -1,0 +1,37 @@
+from hexlet.fs import get_children, get_name, is_file, flatten, mkdir, mkfile
+import os
+
+
+def find_files_by_name(tree, stringo):
+    def walk(node, ancestry):
+        name = get_name(node)
+        way = os.path.join(ancestry, name)
+        if is_file(node):
+            if stringo in name:
+                return way
+            else:
+                return []
+        children = get_children(node)
+        q = list(map(lambda child: walk(child, way), children))
+        s = flatten(q)
+        return s
+    return walk(tree, '')
+
+
+tree = mkdir('/', [
+    mkdir('etc', [
+        mkdir('apache'),
+        mkdir('nginx', [
+            mkfile('nginx.conf', {'size': 800}),
+        ]),
+        mkdir('consul', [
+            mkfile('config.json'),
+            mkfile('data'),
+            mkfile('raft'),
+        ]),
+    ]),
+    mkfile('hosts', {'size': 3500}),
+    mkfile('resolve', {'size': 1000}),
+])
+a = find_files_by_name(tree, 'co')
+print(a)
